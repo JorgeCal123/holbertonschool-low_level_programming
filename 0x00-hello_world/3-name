@@ -1,1 +1,2 @@
-#bin[B[B[B
+#bin/bash
+gcc $CFILE -o cisfun
