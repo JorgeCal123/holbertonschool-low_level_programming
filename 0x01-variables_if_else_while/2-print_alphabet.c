@@ -5,9 +5,9 @@
  */
 int main(void)
 {
-	char letter1='a';
-	char letter2='Z';
-	while (letter1 < letter2)
+	char letter1 = 'a';
+	char letter2 = 'z';
+	while (letter1 > letter2)
 	{
 		putchar(letter1);
 		letter1++;
