@@ -14,7 +14,7 @@ int main(void)
 	{
 		for (cont2 = cont1 + 1 ; cont2 <= 8; cont2++)
 		{
-			for(cont3 = cont2 + 1 ; cont3 <= 9 ; cont3++)
+			for (cont3 = cont2 + 1 ; cont3 <= 9 ; cont3++)
 			{
 				putchar(cont1 + '0');
 				putchar(cont2 + '0');
