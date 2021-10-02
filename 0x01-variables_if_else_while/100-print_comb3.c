@@ -8,7 +8,7 @@ int main(void)
 	int cont1;
 	int cont2;
 	int tmp = 1;
-	
+
 	for (cont1 = 0 ; cont1 < 9 ; cont1++)
 	{
 		for (cont2 = tmp ; cont2 <= 9 ; cont2++)
