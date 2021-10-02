@@ -11,8 +11,7 @@ int main(void)
 	for (cont1 = 0 ; cont1 < 9 ; cont1 ++)
 	{
 		for (cont2 = tmp ; cont2 <= 9 ; cont2 ++)
-		{
-			
+		{	
 			putchar(cont1 + '0');
 			putchar(cont2 + '0');
 			if (cont1 != 8)
@@ -21,9 +20,8 @@ int main(void)
 				putchar(' ');
 			}
 		}
-		tmp++;
-	
+		tmp++;	
 	}
-        putchar('\n');
-        return (0);
+	putchar('\n');
+	return (0);
 }
