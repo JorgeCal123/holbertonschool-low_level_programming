@@ -1,4 +1,4 @@
-#nclude "min.h"
+#nclude "main.h"
 /**
  *_islower - function that checks for lowercase character
  *Returns 1 if c is lowercase
