@@ -11,11 +11,18 @@ int print_sign(int n)
 	int answer;
 
 	if (n == 0)
-		answer = ('0');
+	{
+		_putchar('0');
+		answer = (0);
+	}
 	else if (n < 0)
-		answer = ('-');
+	{
+		_putchar('-');
+	}	answer = (-1);
 	else
-		answer = ('+');
-	_putchar(n + '0');
+	{
+		_putchar('+');
+		answer = (1);
+	}
 	return (answer);
 }
