@@ -16,6 +16,6 @@ int print_sign(int n)
 		answer = ('-');
 	else
 		answer = ('+');
-	_putchar('n');
+	_putchar(n + '0');
 	return (answer);
 }
