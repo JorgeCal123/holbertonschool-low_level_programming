@@ -17,10 +17,8 @@ void jack_bauer(void)
 		_putchar(':');
 		if (j < 10)
 			_putchar('0');
-		
-		_putchar(j + '0');
+		_putchar(j);
 		_putchar('\n');
-	
 		}
 	}
 }
