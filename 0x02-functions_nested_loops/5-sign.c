@@ -18,7 +18,8 @@ int print_sign(int n)
 	else if (n < 0)
 	{
 		_putchar('-');
-	}	answer = (-1);
+		answer = (-1);
+	}
 	else
 	{
 		_putchar('+');
