@@ -1,8 +1,6 @@
-#include <_pputchar.c>
+#include "main.h"
 /**
- *
- *
- *
+ * 10 x alphabet - prints 10 times the alphabet, in lowercase, followed by a new line.
  */
 void print_alphabet_x10()
 {
