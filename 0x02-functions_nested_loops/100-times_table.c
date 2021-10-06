@@ -26,7 +26,7 @@ void print_times_table(int n)
 				k = i * j;
 				if (k < 10)
 				{
-					if (j < n && j > 2)
+					if (j < n && j > 1)
 						{
 							_putchar(',');
 							_putchar(' ');
