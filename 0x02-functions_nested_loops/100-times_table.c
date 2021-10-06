@@ -1,10 +1,10 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * print_to_98 - prints the n times table, starting with 0
  * If n is greater than 15 or less than 0
  * @n: size of table
  */
-void print_to_98(int n)
+void print_times_table(int n)
 {
 	int i, j, k;
 
