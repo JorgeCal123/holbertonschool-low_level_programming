@@ -26,30 +26,39 @@ void print_times_table(int n)
 				k = i * j;
 				if (k < 10)
 				{
+					if (j < n && j > 2)
+						{
+							_putchar(',');
+							_putchar(' ');
+							_putchar(' ');
+							_putchar(' ');
+							}
 					_putchar(k + '0');
-					if (j < n)
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
+					if (j < n && j > 2)
+					{
 				}
 				else if (k >= 10 && k < 100)
 				{
-					_putchar((k / 10) + '0');
-					_putchar((k % 10) + '0');
 					if (j < n)
+					{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
+					}
+
+					_putchar((k / 10) + '0');
+					_putchar((k % 10) + '0');
 				}
 				else{
 					l = k / 10;
+					if (j < n)
+					{
+					_putchar(',');
+					_putchar(' ');
+					}
 					_putchar((l / 10) + '0');
 					_putchar((l % 10) + '0');
 					_putchar((k % 10) + '0');
-					 if (j < n)
-					_putchar(',');
-					_putchar(' ');
 				}
 			}
 		_putchar('\n');
