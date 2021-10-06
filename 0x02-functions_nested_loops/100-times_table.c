@@ -34,8 +34,6 @@ void print_times_table(int n)
 							_putchar(' ');
 							}
 					_putchar(k + '0');
-					if (j < n && j > 2)
-					{
 				}
 				else if (k >= 10 && k < 100)
 				{
