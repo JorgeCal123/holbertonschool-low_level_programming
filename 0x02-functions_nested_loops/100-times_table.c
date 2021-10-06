@@ -20,8 +20,9 @@ void print_times_table(int n)
 			_putchar(' ');
 			_putchar(' ');
 			_putchar(' ');
-			*/
+			
 			}
+			*/
 			for (j = 1; j <= n; j++)
 			{
 				k = i * j;
