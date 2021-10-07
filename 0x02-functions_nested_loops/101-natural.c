@@ -5,12 +5,14 @@
 int main(void)
 {
 	int i = 0;
+	int suma
 
 	while(i < 1024)
 	{
 		if (i % 3 == 0 || i % 5 == 0)
 		{
-			printf("%d ", i);
+			suma += i;
+			printf("%d ", suma);
 		}
 	i++;
 	}
