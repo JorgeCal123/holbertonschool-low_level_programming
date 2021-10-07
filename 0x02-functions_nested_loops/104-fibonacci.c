@@ -10,7 +10,7 @@ int main(void)
 	long s = 2;
 	long temp;
 
-	for (i = 0; i <98; i++)
+	for (i = 0; i <= 98; i++)
 	{
 		if (i < 97)
 			printf("%ld, ", a);
