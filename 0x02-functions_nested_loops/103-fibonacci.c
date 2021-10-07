@@ -1,17 +1,19 @@
 #include <stdio.h>
 /**
- * main - finds and prints the sum of the even-valued terms, followed by a new line.
+ * main - finds and prints the sum of the even-valued terms,
+ * followed by a new line.
  * Return: value 0
  */
 int main(void)
 {
-	long i;
-	long a = 1;
-	long s = 1;
-	long temp;
+	unsigned long i;
+	unsigned long a = 1;
+	unsigned long s = 1;
+	unsigned long temp;
 	long suma;
-	for(i=0; i<=4000000; i++)
-	{	
+	
+	for (i = 0; i < 4000000; i++)
+	{
 		if ((a % 2) == 0)
 		{
 			suma += a;
