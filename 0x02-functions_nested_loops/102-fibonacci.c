@@ -7,13 +7,13 @@
 int main(void)
 {
 	int i;
-	int a = 1;
-	int s = 1;
-	int temp;
+	long a = 1;
+	long s = 2;
+	long temp;
 
 	for (i = 0; i <= 50; i++)
 	{
-		printf("%d ", a);
+		printf("%ld ", a);
 		temp = a;
 		a = s;
 		s = temp + s;
