@@ -5,7 +5,7 @@
 int main(void)
 {
 	int i = 0;
-	int suma
+	int suma;
 
 	while(i < 1024)
 	{
