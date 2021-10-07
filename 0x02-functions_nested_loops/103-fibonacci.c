@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - finds and prints the sum of the even-valued terms,
- * followed by a new line.
+ * followed by a new line limit 4000000.
  * Return: value 0
  */
 int main(void)
