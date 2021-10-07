@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 /**
  * main - finds and prints the sum of the even-valued terms,
@@ -11,7 +12,7 @@ int main(void)
 	unsigned long s = 1;
 	unsigned long temp;
 	float suma;
-	
+
 	for (i = 0; i < 4000000; i++)
 	{
 		if ((a % 2) == 0)
