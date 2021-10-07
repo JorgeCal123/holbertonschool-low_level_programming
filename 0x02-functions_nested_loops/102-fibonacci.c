@@ -16,7 +16,7 @@ int main(void)
 		if (i < 49)
 			printf("%ld, ", a);
 		else
-			printf("%ld", a);
+			printf("%ld\n", a);
 		temp = a;
 		a = s;
 		s = temp + s;
