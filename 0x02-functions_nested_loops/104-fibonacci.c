@@ -6,16 +6,16 @@
 int main(void)
 {
 	int i;
-	long a = 1;
-	long s = 2;
-	long temp;
+	unsigned long a = 1;
+	unsigned long s = 2;
+	unsigned long temp;
 
 	for (i = 0; i <= 98; i++)
 	{
 		if (i < 97)
-			printf("%ld, ", a);
+			printf("%lu, ", a);
 		else
-			printf("%ld\n", a);
+			printf("%lu\n", a);
 	temp = a;
 	a = s;
 	s = temp + s;
