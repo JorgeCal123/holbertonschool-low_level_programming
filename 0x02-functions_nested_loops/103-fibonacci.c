@@ -17,7 +17,8 @@ int main(void)
 		if ((a % 2) == 0)
 		{
 			if (a < 4000000)
-			suma += a;
+			
+				suma += a;
 		}
 		temp = a;
 		a = s;
