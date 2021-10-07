@@ -10,20 +10,19 @@ int main(void)
 	unsigned long a = 1;
 	unsigned long s = 1;
 	unsigned long temp;
-	long suma;
+	float suma;
 	
 	for (i = 0; i < 4000000; i++)
 	{
 		if ((a % 2) == 0)
 		{
 			if (a < 4000000)
-			
 				suma += a;
 		}
 		temp = a;
 		a = s;
 		s = temp + s;
 	}
-	printf("%ld\n", suma);
+	printf("%.0f\n", suma);
 return (0);
 }
