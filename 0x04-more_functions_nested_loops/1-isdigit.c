@@ -4,11 +4,11 @@
  * @c: int for check
  * Return: 1 if c is a digit or 0 otherwise
  */
-int _isdigit(int c)
+int _isdigit(char c)
 {
 	int answer;
 
-	if(c < 10)
+	if (c >= 48 && c <= 57)
 		answer = 1;
 	else
 		answer = 0;
