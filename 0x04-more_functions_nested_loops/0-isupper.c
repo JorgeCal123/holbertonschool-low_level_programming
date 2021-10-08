@@ -8,14 +8,14 @@ int _isupper(char c)
 {
 	char inicio;
 	int resp;
-	int fin = 0;
+	int final = 0;
 
-	for (inicio = 'A'; inicio 'Z' && fin == 0; inicio++)
+	for (inicio = 'A'; inicio <= 'Z' && final == 0; inicio++)
 	{
 		if (c == inicio)
 		{
 			resp = 1;
-			fin = 1;
+			final = 1;
 		}
 		else
 		{
