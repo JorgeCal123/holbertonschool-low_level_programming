@@ -8,8 +8,8 @@ int _atoi(char *s)
 {
 	unsigned int resultado = 0;
 	int signo = 1;
-	int parte1 = 0;
-	int parte2 = 0;
+	unsigned int parte1 = 0;
+	unsigned int parte2 = 0;
 	int i = 0;
 	int terminar = 1;
 
