@@ -3,8 +3,8 @@
  * _strncat - concatenates two strings with n size (bytes)
  * @dest: first pointer char
  * @src: second pointer char
- * @int: size in bytes
- * Return pointer
+ * @n: size in bytes
+ * Return: pointer char
  */
 char *_strncat(char *dest, char *src, int n)
 {
@@ -16,14 +16,15 @@ char *_strncat(char *dest, char *src, int n)
 
 	while (src[j] != '\0')
 	{
-		if (n == j)
-			break;
-		else
+		if (n != j)
 		{
 			dest[i] = src[j];
 			j++;
 			i++;
 		}
+		else
+			break;
+
 	}
 	dest[i] = '\0';
 	return (dest);
