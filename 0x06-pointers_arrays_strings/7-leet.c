@@ -16,10 +16,11 @@ char *leet(char *s)
 	{
 		while (i < 5)
 		{
-		if (s[i] == letter1[i] || s[i] == letter2[i])
-			s[i] = num[i];
-		i++;
+			if (s[j] == letter1[i] || s[j] == letter2[i])
+				s[j] = num[i];
+			i++;
 		}
+		i = 0;
 		j++;
 	}
 	return (s);
