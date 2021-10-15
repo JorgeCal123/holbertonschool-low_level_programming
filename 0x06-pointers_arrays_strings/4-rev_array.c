@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_array - function that reverses the content of an array of integers.
- * @q: first integer
- * @n: second integer
+ * reverse_array - function that reverses the content of an array of integers.
+ * @a: first integer
+ * @n: size integer
  */
 void reverse_array(int *a, int n)
 {
