@@ -6,9 +6,9 @@
  */
 char *leet(char *s)
 {
-	char *letter1 = "aeotl"
-	char *letter2 = "AEOTL"
-	char *num = "43071";
+	char letter1[] = "aeotl";
+	char letter2[] = "AEOTL";
+	char num[] = "43071";
 	int i = 0;
 	int j = 0;
 
