@@ -9,18 +9,18 @@
 char *_strchr(char *s, char c)
 {
 	int i = 0;
-	int find = 0;
+	int find = 1;
 
-	while (s[i] != '\0')
+	while (s[i] != '\0' && find)
 	{
 		if (s[i] == c)
 		{
 			s = (&s[i]);
-			find = 1;
+			find = 0;
 		}
 		i++;
 	}
-	if (find == 1)
+	if (find == 0)
 	return (s);
 	else
 		return (0);
