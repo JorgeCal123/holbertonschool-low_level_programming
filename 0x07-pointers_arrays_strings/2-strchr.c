@@ -21,7 +21,7 @@ char *_strchr(char *s, char c)
 		i++;
 	}
 	if (find == 0)
-	return (s);
+		return (s);
 	else
 		return (0);
 }
