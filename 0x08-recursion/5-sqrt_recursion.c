@@ -9,29 +9,20 @@ int _sqrt_recursion(int n)
 {
 	if (n == 1)
 		return (1);
-	if(n == 2)
+	if(n <= 0)
 		return (-1);
 	else
-		return (_rt(n, 0, 0));
+		return (_root(n, 2));
 }
 
-int _sqrt(int n, int total, int nump)
+int _root(int n, int root)
 {
-	if (n == 1)
-		return(total);
-
-	return (_sqrt(n - 1, total¨* nump));
-
-}
-
-int _rt(int valor, int cant, int numP)
-{
-	if(valor == 1)
-		return (_sqrt(cant / 2, 2, numP));
-	if(valor % 2 == 0)
-		return (_rt( valor / 2 ,cant + 1), 2);
-	else if(valor % 3 == 0)
-		return (_rt( valor / 2 ,cant + 1), 3);
+	if (root * root > n)
+		return (-1);
+	else if (root * root == n)
+		return (root);
 	else
-                return (_rt( valor / 2 ,cant + 1), 5);
+		return (_root(n, root + 1));
+
 }
+
