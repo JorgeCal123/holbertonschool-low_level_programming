@@ -18,13 +18,20 @@ int div = 2;
 	return (is_div(n, div));
 }
 
+/**
+ * is_div - looking for if the number is divisible
+ * @n: value integer
+ * @d: value integer
+ * Return: 0 if is divisible and 1 if not is divisible
+ */
+
 int is_div(int n, int d)
 {
-if (n % d == 0)
-return (0);
+	if (n % d == 0)
+		return (0);
 
-if (d == n / 2)
-return (1);
+	if (d == n / 2)
+		return (1);
 
-return (is_div(n, d + 1));
+	return (is_div(n, d + 1));
 }
