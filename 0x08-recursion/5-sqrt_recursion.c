@@ -9,11 +9,18 @@ int _sqrt_recursion(int n)
 {
 	if (n == 1)
 		return (1);
-	if(n <= 0)
+	if (n <= 0)
 		return (-1);
 	else
 		return (_root(n, 2));
 }
+
+/**
+ * _root - check what is the root of a number
+ * @n: value integer
+ * @root: value integer
+ * Return: root of number integer
+ */
 
 int _root(int n, int root)
 {
