@@ -8,3 +8,4 @@ int is_prime_number(int n);
 int _putchar(char c);
 int _root(int n, int root);
 int is_div(int n, int d);
+int is_palindrome(char *s);
