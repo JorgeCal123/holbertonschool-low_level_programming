@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * string_nconcat -  function that concatenates two strings.
+ * string_nconcat - function that concatenates two strings.
  * @s1: first pointer
  * @s2: second pointer
  * @n: size of pointer
@@ -25,9 +25,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			size2 = n;
 		else
 			size2 = strlen(s2);
-	}
+	}	
 	p = malloc((size2 + size1) * sizeof(char) + 1);
 	len = size1 + size2;
+	if (p == NULL)
+		return (NULL);
 	if (p != NULL)
 	{
 		for (i = 0; i < size1; i++)
