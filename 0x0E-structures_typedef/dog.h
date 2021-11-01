@@ -1,5 +1,5 @@
 #ifndef DOG_H
-#define DOG
+#define DOG_H
 /**
  * struct dog - Short description
  * @name: First member
@@ -10,8 +10,8 @@
  */
 struct dog
 {
-char *name;
-float age;
-char *owner;
+	char *name;
+	float age;
+	char *owner;
 };
 #endif
