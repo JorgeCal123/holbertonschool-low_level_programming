@@ -1,12 +1,12 @@
 #ifndef DOG_H
 #define DOG_H
 /**
- * struct dog - Short description
- * @name: First member
- * @age: Second member
- * @owner: Third member
+ * struct dog - Class dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: name of owner
  *
- * Description: Longer description
+ * Description: type dog 
  */
 struct dog
 {
