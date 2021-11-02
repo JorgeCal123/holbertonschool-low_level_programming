@@ -20,11 +20,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	cp_name = malloc(sizeof(char) * (strlen(name) + 1));
 	if (cp_name == NULL)
+	{
+		free(new_chandoso);
 		return (NULL);
+	}
 	cp_owner = malloc(sizeof(char) * (strlen(owner) + 1));
 	if (cp_owner == NULL)
+	{
+		free(cp_name);
+		free(new_chandoso);
 		return (NULL);
-
+	}
 	while (name[i] != '\0')
 	{
 		cp_name[i] = name[i];
