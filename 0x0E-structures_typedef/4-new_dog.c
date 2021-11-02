@@ -16,10 +16,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_chandoso = malloc(sizeof(struct dog));
 	if (new_chandoso == NULL)
 		return (NULL);
-	cp_name = malloc(sizeof(char) * (strlen(name) + 1));
+	cp_name = malloc(sizeof(char) * (strlen(name)));
 	if (cp_name == NULL)
 		return (NULL);
-	cp_owner = malloc(sizeof(char) * (strlen(owner) + 1));
+	cp_owner = malloc(sizeof(char) * (strlen(owner)));
 	if (cp_owner == NULL)
 		return (NULL);
 
@@ -27,7 +27,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		*cp_name++ = *name++;
 	while (*owner)
 		*cp_owner++ = *owner++;
-
 	new_chandoso->name = name;
 	new_chandoso->age = age;
 	new_chandoso->owner = owner;
