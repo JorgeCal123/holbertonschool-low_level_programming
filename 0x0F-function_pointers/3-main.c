@@ -10,6 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int (*oprt)(int, int);
+	int resultado;
 
 	if (argc != 4)
 	{
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-
-	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
+        resultado = oprt(atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", resultaado);
 	return (0);
 }
