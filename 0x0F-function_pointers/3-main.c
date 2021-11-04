@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
 	int (*oprt)(int, int);
 	int resultado;
+
 	if (argc != 4)
 	{
 		printf("Error\n");
