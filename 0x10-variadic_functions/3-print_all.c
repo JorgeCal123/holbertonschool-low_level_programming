@@ -34,8 +34,8 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			arg_s = va_arg(list_all, char *);
-			if (str == NULL)
-				str = "(nil)";
+			if (arg_s == NULL)
+				arg_s = "(nil)";
 			printf("%s", arg_s);
 			break;
 		default:
