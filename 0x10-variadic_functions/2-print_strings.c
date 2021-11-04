@@ -10,13 +10,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list list_string;
 	unsigned int i = 0;
-	char* arg;
+	char *arg;
 
 	va_start(list_string, n);
 	while (i < n)
 	{
-		arg = va_arg(list_string, char*);
-		if (i != n - 1)
+		arg = va_arg(list_string, char *);
+		if (i != n - 1 && separator != NULL)
 			printf("%s%s", arg, separator);
 		else
 			printf("%s", arg);
