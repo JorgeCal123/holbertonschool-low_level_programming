@@ -13,14 +13,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char* arg;
 
 	va_start(list_string, n);
-	while(i < n)
+	while (i < n)
 	{
 		arg = va_arg(list_string, char*);
 		if (i != n - 1)
-			printf("%s%s",arg,separator);
+			printf("%s%s", arg, separator);
 		else
-			printf("%s\n",arg);
+			printf("%s", arg);
 		i++;
 	}
 	va_end(list_string);
+	printf("\n");
 }
