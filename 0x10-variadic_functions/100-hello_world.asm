@@ -1,3 +1,7 @@
+;Fichero 100-hello_world.ASM
+;
+;program in assembly that prints Hello, World, 
+;followed by a new line.
 section	.text
 	global main
 main:
