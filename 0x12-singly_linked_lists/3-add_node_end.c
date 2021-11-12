@@ -3,6 +3,7 @@
  * add_node_end - function that adds a new node at the
  * end of a list_t list.
  * @head: doble pointer of type list_t
+ * @str: pointer type string
  * Return: pointer typi list_t
  */
 list_t *add_node_end(list_t **head, const char *str)
