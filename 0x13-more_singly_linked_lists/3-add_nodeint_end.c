@@ -4,6 +4,7 @@
  * of a listint_t list.
  * @head: new node
  * @n: value type integer
+ * Return: a node type listint_t
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
