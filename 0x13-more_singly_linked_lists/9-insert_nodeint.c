@@ -26,9 +26,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	}
 	actual = *head;
-	while (actual != NULL)
+	while (actual != NULL && posicion <= idx)
 	{
-		if (posicion == (idx - 1))
+		if (idx == 0)
+		{
+			*head = nuevo;
+			nuevo->next = actual;
+			return(nuevo);
+		}
+		else if (posicion == (idx - 1))
 			anterior = actual;
 
 		if (posicion == (idx))
