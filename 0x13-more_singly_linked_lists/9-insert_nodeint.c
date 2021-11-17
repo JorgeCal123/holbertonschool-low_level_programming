@@ -32,7 +32,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		{
 			*head = nuevo;
 			nuevo->next = actual;
-			return(nuevo);
+			return (nuevo);
 		}
 		else if (posicion == (idx - 1))
 			anterior = actual;
