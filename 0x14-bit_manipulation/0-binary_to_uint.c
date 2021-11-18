@@ -32,6 +32,9 @@ unsigned int binary_to_uint(const char *b)
 	int a = 2;
 	int exp = 0;
 
+	if (!b)
+		return (0);
+
 	while (i >= 0)
 	{
 		if (b[i] >= '0' && b[i] <= '1')
