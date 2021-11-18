@@ -37,7 +37,7 @@ unsigned int binary_to_uint(const char *b)
 
 	while (i >= 0)
 	{
-		if (b[i] >= '0' && b[i] <= '1')
+		if (b[i] != '0' && b[i] != '1')
 		{
 		if (b[i] == '1')
 			decimal += _pow(a, exp);
