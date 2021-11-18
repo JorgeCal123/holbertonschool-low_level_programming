@@ -1,5 +1,19 @@
 #include "main.h"
 /**
+ * _strlen - calculates the length of the string
+ * @s: input
+ * Return: length of string
+ */
+unsigned int _strlen(const char *s)
+{
+	unsigned int i;
+
+	for (i = 0; s[i]; i++)
+		;
+	return (i);
+}
+
+/**
  * _pow - function that do operations with potency
  * @n: base number
  * @p: exponent number
@@ -28,7 +42,7 @@ unsigned int _pow(unsigned int n, unsigned int p)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int decimal = 0;
-	int i = strlen(b) - 1;
+	int i = _strlen(b) - 1;
 	int a = 2;
 	int exp = 0;
 
