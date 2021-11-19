@@ -8,9 +8,9 @@ unsigned int _strlen(const char *s)
 {
 	unsigned int i;
 
-	for (i = 0; s[i]; i++)
-		;
-	return (i);
+	while(s[i] != '\0')
+		i++;
+	return (i - 1);
 }
 
 /**
@@ -42,8 +42,8 @@ unsigned int _pow(unsigned int n, unsigned int p)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int decimal = 0;
-	int i = _strlen(b) - 1;
-	int a = 2;
+	int i = _strlen(b);
+	int ope = 1;
 	int exp = 0;
 
 	if (b == NULL)
@@ -54,7 +54,8 @@ unsigned int binary_to_uint(const char *b)
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
 		if (b[i] == '1')
-			decimal += _pow(a, exp);
+			decimal += ope;
+		ope *= 2;
 
 	i--;
 	exp++;
