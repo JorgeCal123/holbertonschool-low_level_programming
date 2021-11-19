@@ -8,29 +8,9 @@ unsigned int _strlen(const char *s)
 {
 	unsigned int i;
 
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	return (i - 1);
-}
-
-/**
- * _pow - function that do operations with potency
- * @n: base number
- * @p: exponent number
- * Return: potency
- */
-unsigned int _pow(unsigned int n, unsigned int p)
-{
-	int resultado = n;
-
-	if (p == 0)
-		return (1);
-	while (p > 1)
-	{
-		resultado = resultado * n;
-		p--;
-	}
-	return (resultado);
 }
 
 /**
