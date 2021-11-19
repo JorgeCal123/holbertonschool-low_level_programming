@@ -22,11 +22,12 @@ unsigned int _strlen(const char *s)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int decimal = 0;
-	int i = _strlen(b);
+	int i;
 	int ope = 1;
 
 	if (b == NULL)
 		return (0);
+	i = _strlen(b);
 
 	while (i >= 0)
 	{
