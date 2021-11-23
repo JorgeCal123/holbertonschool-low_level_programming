@@ -18,15 +18,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 		return (0);
-	
+
 	file_open = open(filename, O_RDONLY);
 	if (file_open == -1)
 		return (0);
 
 	file_read = read(file_open, save, letters);
 	if (file_read == 0)
-                return (0);
-	
+		return (0);
+
 	write(STDOUT_FILENO, save, file_read);
 	close(file_open);
 	return (file_read);
