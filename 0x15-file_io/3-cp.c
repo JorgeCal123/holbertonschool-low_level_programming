@@ -20,8 +20,9 @@ void errorWrite(int inputFd, int outputFd)
 
 	if (close(outputFd) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", outputFd);
-	}
+	
 	exit(100);
+	}
 }
 /**
  * main - Copies the content of a file to another file.
