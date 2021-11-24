@@ -43,7 +43,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
 	inputFd = open(argv[1], O_RDONLY);
 	if (inputFd == -1)
 	{
@@ -52,7 +51,6 @@ int main(int argc, char *argv[])
 	}
 	openFlags = O_CREAT | O_WRONLY | O_TRUNC;
 	filePerms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-
 	outputFd = open(argv[2], openFlags, filePerms);
 	if (outputFd == -1)
 	{
