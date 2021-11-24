@@ -62,8 +62,10 @@ int main(int argc, char *argv[])
 	while ((numRead = read(inputFd, buf, 1024)) > 0)
 	{
 		if (numRead == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			errorWrite(inputFd, outputFd);
-
+		}
 		writefile = write(outputFd, buf, numRead);
 		if (writefile == -1)
 		{
