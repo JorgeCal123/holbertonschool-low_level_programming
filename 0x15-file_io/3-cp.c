@@ -12,17 +12,18 @@
  */
 void errorWrite(int inputFd, int outputFd)
 {
-	if (inputFd < 0 || outputFd < 0)
-	{
 
 	if (close(inputFd) == -1)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", inputFd);
-
-	if (close(outputFd) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", outputFd);
-	
 	exit(100);
 	}
+	if (close(outputFd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", outputFd);
+		exit(100);
+	}
+
 }
 /**
  * main - Copies the content of a file to another file.
