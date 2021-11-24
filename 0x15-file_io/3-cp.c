@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
-#ifndef BUF_SIZE /* Allow "cc -D" to override definition */
+#ifndef BUF_SIZE
 #define BUF_SIZE 1024
 #endif
 /**
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	/* Open input and output files */
+
 	inputFd = open(argv[1], O_RDONLY);
 	if (inputFd == -1)
 	{
@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 	}
 	openFlags = O_CREAT | O_WRONLY | O_TRUNC;
 	filePerms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-	/* rw-rw-r- */
+
 	outputFd = open(argv[2], openFlags, filePerms);
 	if (outputFd == -1)
 	{
