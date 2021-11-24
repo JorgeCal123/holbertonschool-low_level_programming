@@ -7,7 +7,12 @@
 #ifndef BUF_SIZE /* Allow "cc -D" to override definition */
 #define BUF_SIZE 1024
 #endif
-
+/**
+ * main - Copies the content of a file to another file.
+ * @ac: Argument count
+ * @av: argument values
+ * Return: value of exit
+ */
 int main(int argc, char *argv[])
 {
 	int inputFd, outputFd, openFlags, writefile;
@@ -27,18 +32,15 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-
 	openFlags = O_CREAT | O_WRONLY | O_TRUNC;
 	filePerms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP |S_IROTH; 
 	/* rw-rw-r- */
-
 	outputFd = open(argv[2], openFlags, filePerms);
 	if (outputFd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-
 	/* Transfer data until we encounter end of input or an error */
 	while ((numRead = read(inputFd, buf, BUF_SIZE)) > 0)
 	{
