@@ -4,9 +4,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
-#ifndef BUF_SIZE
-#define BUF_SIZE 1024
-#endif
+
 /**
  * errorWrite - close error in the write
  * @inputFd: first arg in open
@@ -38,7 +36,7 @@ int main(int argc, char *argv[])
 	int inputFd, outputFd, openFlags, writefile;
 	mode_t filePerms;
 	ssize_t numRead;
-	char buf[BUF_SIZE];
+	char buf[1024];
 
 	if (argc != 3)
 	{
@@ -61,7 +59,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while ((numRead = read(inputFd, buf, BUF_SIZE)) > 0)
+	while ((numRead = read(inputFd, buf, 1024)) > 0)
 	{
 		if (numRead == -1)
 			errorWrite(inputFd, outputFd);
@@ -73,6 +71,6 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	errorWrite( inputFd, outputFd);
+	errorWrite(inputFd, outputFd);
 	exit(EXIT_SUCCESS);
 }
