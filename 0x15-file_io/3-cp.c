@@ -34,7 +34,7 @@ void errorWrite(int inputFd, int outputFd)
 int main(int argc, char *argv[])
 {
 	int inputFd, outputFd, openFlags, writefile;
-	mode_t filePerms;
+	mode_t filePerms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	ssize_t numRead;
 	char buf[1024];
 
@@ -50,7 +50,6 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	openFlags = O_CREAT | O_WRONLY | O_TRUNC;
-	filePerms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	outputFd = open(argv[2], openFlags, filePerms);
 	if (outputFd == -1)
 	{
@@ -63,6 +62,7 @@ int main(int argc, char *argv[])
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			errorWrite(inputFd, outputFd);
+			exit(98);
 		}
 		writefile = write(outputFd, buf, numRead);
 		if (writefile == -1)
