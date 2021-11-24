@@ -8,9 +8,29 @@
 #define BUF_SIZE 1024
 #endif
 /**
+ * errorWrite - close error in the write
+ * @inputFd: first arg in open
+ * @outputFd: second arg in open
+ */
+void errorWrite(int inputFd, int outputFd)
+{
+	if (close(inputFd) == -1)
+	{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", inputFd);
+	exit(100);
+	}
+
+	if (close(outputFd) == -1)
+	{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", outputFd);
+	exit(100);
+}
+
+}
+/**
  * main - Copies the content of a file to another file.
- * @ac: Argument count
- * @av: argument values
+ * @argc: Argument with count
+ * @argv: argument with values
  * Return: value of exit
  */
 int main(int argc, char *argv[])
@@ -41,24 +61,10 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	/* Transfer data until we encounter end of input or an error */
 	while ((numRead = read(inputFd, buf, BUF_SIZE)) > 0)
 	{
-		 if (numRead == -1)
-        	{
-                	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-                        if (close(inputFd) == -1)
-			{
-				dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", inputFd);
-				exit(100);
-			}
-
-			if (close(outputFd) == -1)
-			{
-				dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", outputFd);
-				exit(100);
-			}
-       		}
+		if (numRead == -1)
+			errorWrite(inputFd, outputFd);
 
 		writefile = write(outputFd, buf, numRead);
 		if (writefile == -1)
@@ -67,18 +73,6 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-		if (close(inputFd) == -1)
-                        {
-                                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", inputFd);
-                                exit(100);
-                        }
-
-                        if (close(outputFd) == -1)
-                        {
-                        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", outputFd);
-                        exit(100);
-                        }
-
-
+	errorWrite(int inputFd, int outputFd)
 	exit(EXIT_SUCCESS);
 }
