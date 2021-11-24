@@ -71,5 +71,5 @@ int main(int argc, char *argv[])
 		}
 	}
 	errorWrite(inputFd, outputFd);
-	exit(EXIT_SUCCESS);
+	return (0);
 }
