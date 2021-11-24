@@ -73,6 +73,6 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	errorWrite(int inputFd, int outputFd)
+	errorWrite( inputFd, outputFd);
 	exit(EXIT_SUCCESS);
 }
