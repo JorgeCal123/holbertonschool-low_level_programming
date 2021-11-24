@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 		writefile = write(outputFd, buf, numRead);
-		if (numRead != writefile || writefile == -1)
+		if (writefile == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
