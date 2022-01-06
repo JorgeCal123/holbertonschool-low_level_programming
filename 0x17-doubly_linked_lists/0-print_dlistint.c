@@ -10,14 +10,16 @@
 size_t print_dlistint(const dlistint_t *h)
 {
 	const dlistint_t *tmp;
-        size_t conta = 0;
+	size_t cont = 0;
 
+	if (h == NULL)
+		return (cont);
 	tmp = h;
 
-	while(tmp)
+	while (tmp)
 	{
-		conta++;
-		tmp =tmp->next;
+		cont++;
+		tmp = tmp->next;
 	}
-	return conta;
+	return (cont);
 }
