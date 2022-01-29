@@ -4,6 +4,7 @@
  * @ht: is the hash table you want to add or update the key/value
  * @key: is the key
  * @value: is the value associated with the key
+ * Return: one integer with the value od key
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {	hash_node_t *new, *tmp;
